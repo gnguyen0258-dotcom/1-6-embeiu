@@ -626,13 +626,18 @@
             });
         }
 
+        async function fetchRemoteConfigText() {
+            const response = await fetch('assets/app-config.json?ts=' + Date.now(), { cache: 'no-store' });
+            if (!response.ok) throw new Error('Không đọc được assets/app-config.json');
+            return await response.text();
+        }
+
         async function loadLocalConfig() {
             let config = window.DEFAULT_APP_CONFIG || {};
             try {
-                const response = await fetch('assets/app-config.json', { cache: 'no-store' });
-                if (response.ok) {
-                    config = mergeConfig(config, await response.json());
-                }
+                const remoteConfigText = await fetchRemoteConfigText();
+                window.__REMOTE_APP_CONFIG_TEXT = remoteConfigText;
+                config = mergeConfig(config, JSON.parse(remoteConfigText));
             } catch (e) {
                 console.warn('Không đọc được assets/app-config.json, dùng cấu hình nhúng:', e);
             }
@@ -645,6 +650,14 @@
         }
 
         window.APP_CONFIG_PROMISE = loadLocalConfig();
+        window.setInterval(async function() {
+            try {
+                const remoteConfigText = await fetchRemoteConfigText();
+                if (window.__REMOTE_APP_CONFIG_TEXT && remoteConfigText !== window.__REMOTE_APP_CONFIG_TEXT) {
+                    window.location.reload();
+                }
+            } catch (e) {}
+        }, 60000);
     })();
     </script>
 
