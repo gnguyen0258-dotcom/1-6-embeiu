@@ -1,0 +1,42 @@
+{
+  "websiteId": "50bbfaeb61587746",
+  "appTitle": "Món Quà Nhỏ",
+  "appIcon": "assets/images/icons/couple.png",
+  "enableWebsiteInfo": false,
+  "enablePasscode": false,
+  "enableMorphEffect": true,
+  "enableSphere": true,
+  "enableSphereFlyingImages": true,
+  "enableLetter": true,
+  "passcodeTitle": "",
+  "passcodeSubtitle": "",
+  "morphTexts": [
+    "Chúc Mừng",
+    "Ngày Quốc Tế Phụ Nữ ",
+    "8 Tháng 3",
+    "Lớp 10A1"
+  ],
+  "particleImage": "assets/uploads/womenday-20260304-054516-sjxp8q.jpeg",
+  "sphereImages": [
+    "assets/uploads/womenday-20260304-054518-00yv7l.jpeg",
+    "assets/uploads/womenday-20260304-054519-36jxf3.jpeg",
+    "assets/uploads/womenday-20260304-054520-ska8g1.jpeg",
+    "assets/uploads/womenday-20260304-054521-2rqlr3.jpeg",
+    "assets/uploads/womenday-20260304-054523-vhaos0.jpeg",
+    "assets/uploads/womenday-20260304-054524-z1ry7s.jpeg",
+    "assets/uploads/womenday-20260304-054525-0t6iok.jpeg",
+    "assets/uploads/womenday-20260304-054526-rc5k0j.jpeg",
+    "assets/uploads/womenday-20260304-054527-9pgxby.jpeg",
+    "assets/uploads/womenday-20260304-054528-7pcw5s.jpeg"
+  ],
+  "letter": {
+    "text": "Happy Women's Day!\n\nChúc các bạn gái lớp 10A1 luôn luôn xinh đẹp, rực rỡ như những bông hoa.",
+    "image": "assets/uploads/womenday-letter-image-20260304-054530-6kf5gf.jpg",
+    "caption": "Mãi iu 10A1"
+  },
+  "bgMusic": "musics/noinaycoanh.mp3",
+  "bgVolume": 0.55,
+  "expiresAt": null,
+  "productType": "womenday",
+  "createdAt": "2026-03-04T05:45:32.244Z"
+}
